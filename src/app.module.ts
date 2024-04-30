@@ -11,6 +11,7 @@ import { CategoryController } from './category/controller/category.controller';
 import { CategoryModule } from './category/category.module';
 import { Category } from './category/entity/category.entity';
 import { Product } from './product/product.entity';
+import { ProductModule } from './product/product.module';
 
 @Module({
   imports: [DatabaseModule,
@@ -18,6 +19,7 @@ import { Product } from './product/product.entity';
     TypeOrmModule.forFeature([User, Filiacao]),
     CategoryModule,
     TypeOrmModule.forFeature([Category, Product]),
+    ProductModule
   ],
   controllers: [AppController, CategoryController],
   providers: [AppService, CategoryService],
