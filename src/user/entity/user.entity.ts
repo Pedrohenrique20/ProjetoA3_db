@@ -1,5 +1,6 @@
-import { Column, Entity, JoinColumn, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, JoinColumn, ManyToMany, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { Filiacao } from './filiacao.entity';
+import { Restaurant } from 'src/restaurant/restaurant.entity';
 
 @Entity('user')
 export class User {
@@ -17,4 +18,5 @@ export class User {
 
   @OneToMany(() => Filiacao, filiacao => filiacao.user)
   filiacoes: Filiacao[];
+
 }

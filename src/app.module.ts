@@ -14,6 +14,8 @@ import { Product } from './product/product.entity';
 import { ProductModule } from './product/product.module';
 import { WaitingLineService } from './services/waiting-line.service';
 import { WaitingLineController } from './controllers/waiting-line.controller';
+import { RestaurantModule } from './restaurant/restaurant.module';
+import { MenuModule } from './menu/menu.module';
 
 @Module({
   imports: [DatabaseModule,
@@ -21,7 +23,9 @@ import { WaitingLineController } from './controllers/waiting-line.controller';
     TypeOrmModule.forFeature([User, Filiacao]),
     CategoryModule,
     TypeOrmModule.forFeature([Category, Product]),
-    ProductModule
+    ProductModule,
+    RestaurantModule,
+    MenuModule
   ],
   controllers: [AppController, CategoryController, WaitingLineController],
   providers: [AppService, CategoryService, WaitingLineService],
