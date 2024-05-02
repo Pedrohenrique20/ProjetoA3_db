@@ -17,18 +17,21 @@ import { MenuModule } from './menu/menu.module';
 import { Restaurant } from './restaurant/restaurant.entity';
 import { Menu } from './menu/entity/menu.entity';
 import { AdminsModule } from './admins/admins.module'
+import { Admins } from './admins/admins.entity';
+import { RestaurantController } from './restaurant/controller/restaurant.controller';
+import { RestaurantService } from './restaurant/service/restaurant.service';
 
 @Module({
   imports: [DatabaseModule,
     UserModule,
-    TypeOrmModule.forFeature([User, Filiacao, Product, Restaurant, Category, Menu]),
+    TypeOrmModule.forFeature([User, Filiacao, Product, Restaurant, Category, Menu, Admins]),
     CategoryModule,
     ProductModule,
     RestaurantModule,
     MenuModule,
     AdminsModule
   ],
-  controllers: [AppController, CategoryController],
-  providers: [AppService, CategoryService],
+  controllers: [AppController, CategoryController, RestaurantController],
+  providers: [AppService, CategoryService, RestaurantService],
 })
 export class AppModule {}

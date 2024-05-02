@@ -1,5 +1,5 @@
 import { Restaurant } from "src/restaurant/restaurant.entity";
-import { Column, Entity, JoinColumn, ManyToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, JoinColumn, JoinTable, ManyToMany, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity('admins')
 export class Admins {
@@ -16,6 +16,6 @@ export class Admins {
     admin_password: string;
 
     @ManyToMany(() => Restaurant, restaurant => restaurant.admins)
-    @JoinColumn({name: "Restaurants"})
+    @JoinTable({name: "Restaurants"})
     restaurants: Restaurant[];
 }
