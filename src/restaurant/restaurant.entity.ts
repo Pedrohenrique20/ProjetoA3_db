@@ -1,3 +1,4 @@
+import { Admins } from "src/admins/admins.entity";
 import { Menu } from "src/menu/entity/menu.entity";
 import { Column, Entity, JoinColumn, ManyToMany, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 
@@ -19,5 +20,7 @@ export class Restaurant {
     @JoinColumn({name: 'menu_id'})
     menu: Menu;
 
-    
+    @ManyToMany(() => Admins, admins => admins.restaurants)
+    @JoinColumn({name: "Administradores"})
+    admins: Admins[];
 }

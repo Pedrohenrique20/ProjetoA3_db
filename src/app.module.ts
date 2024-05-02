@@ -16,6 +16,7 @@ import { RestaurantModule } from './restaurant/restaurant.module';
 import { MenuModule } from './menu/menu.module';
 import { Restaurant } from './restaurant/restaurant.entity';
 import { Menu } from './menu/entity/menu.entity';
+import { AdminsModule } from './admins/admins.module'
 
 @Module({
   imports: [DatabaseModule,
@@ -24,7 +25,8 @@ import { Menu } from './menu/entity/menu.entity';
     CategoryModule,
     ProductModule,
     RestaurantModule,
-    MenuModule
+    MenuModule,
+    AdminsModule
   ],
   controllers: [AppController, CategoryController],
   providers: [AppService, CategoryService],
