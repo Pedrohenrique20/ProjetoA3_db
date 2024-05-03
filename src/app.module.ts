@@ -13,25 +13,20 @@ import { Category } from './category/entity/category.entity';
 import { Product } from './product/product.entity';
 import { ProductModule } from './product/product.module';
 import { RestaurantModule } from './restaurant/restaurant.module';
+import { MenuModule } from './menu/menu.module';
 import { Restaurant } from './restaurant/restaurant.entity';
-
-
-import { AdminsModule } from './admins/admins.module'
-import { Admins } from './admins/admins.entity';
-import { RestaurantController } from './restaurant/controller/restaurant.controller';
-import { RestaurantService } from './restaurant/service/restaurant.service';
-
+import { Menu } from './menu/user/entity/menu.entity';
 
 @Module({
   imports: [DatabaseModule,
     UserModule,
-    TypeOrmModule.forFeature([User, Filiacao, Product, Restaurant, Category,Admins]),
+    TypeOrmModule.forFeature([User, Filiacao, Product, Restaurant, Category, Menu]),
     CategoryModule,
     ProductModule,
     RestaurantModule,
-    AdminsModule
+    MenuModule
   ],
-  controllers: [AppController, CategoryController, RestaurantController],
-  providers: [AppService, CategoryService, RestaurantService],
+  controllers: [AppController, CategoryController],
+  providers: [AppService, CategoryService],
 })
 export class AppModule {}
