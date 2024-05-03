@@ -3,7 +3,7 @@ import { Column, Entity,  ManyToMany,  PrimaryGeneratedColumn } from "typeorm";
 
 import { Admins } from "src/admins/admins.entity";
 
-import { Column, Entity, JoinColumn, JoinTable, ManyToMany, OneToOne, PrimaryGeneratedColumn } from "typeorm";
+
 
 
 @Entity('restaurant')
