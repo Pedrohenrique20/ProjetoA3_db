@@ -1,7 +1,7 @@
-import { MenuEntity } from './menu.entity';
+import { Menu } from './menu.entity';
 
-describe('MenuEntity', () => {
+describe('Menu', () => {
   it('should be defined', () => {
-    expect(new MenuEntity()).toBeDefined();
+    expect(new Menu()).toBeDefined();
   });
 });
