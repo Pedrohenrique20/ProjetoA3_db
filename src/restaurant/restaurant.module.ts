@@ -5,6 +5,10 @@ import { AppService } from 'src/app.service';
 import { DatabaseModule } from 'src/database/database.module';
 import { Menu } from 'src/menu/entity/menu.entity';
 import { Restaurant } from './restaurant.entity';
+<<<<<<< HEAD
+=======
+import { Admins } from 'src/admins/admins.entity';
+>>>>>>> parent of f64e3be (Crud de Restaurante feito)
 
 
 @Module({

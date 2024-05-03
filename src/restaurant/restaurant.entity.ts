@@ -19,5 +19,11 @@ export class Restaurant {
     @JoinColumn({name: 'menu_id'})
     menu: Menu;
 
+<<<<<<< HEAD
     
+=======
+    @ManyToMany(() => Admins, admins => admins.restaurants)
+    @JoinColumn({name: "Administradores"})
+    admins: Admins[];
+>>>>>>> parent of f64e3be (Crud de Restaurante feito)
 }

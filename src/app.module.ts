@@ -16,6 +16,10 @@ import { RestaurantModule } from './restaurant/restaurant.module';
 import { MenuModule } from './menu/menu.module';
 import { Restaurant } from './restaurant/restaurant.entity';
 import { Menu } from './menu/entity/menu.entity';
+<<<<<<< HEAD
+=======
+import { AdminsModule } from './admins/admins.module'
+>>>>>>> parent of f64e3be (Crud de Restaurante feito)
 
 @Module({
   imports: [DatabaseModule,
