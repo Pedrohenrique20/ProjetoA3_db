@@ -1,4 +1,4 @@
-import { Menu } from "src/menu/entity/menu.entity";
+import { Menu } from "src/menu/user/entity/menu.entity";
 import { Column, Entity, JoinColumn, ManyToMany, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity('restaurant')
