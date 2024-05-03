@@ -1,23 +1,28 @@
-import { Menu } from "src/menu/user/entity/menu.entity";
-import { Column, Entity, JoinColumn, ManyToMany, OneToOne, PrimaryGeneratedColumn } from "typeorm";
+
+import { Column, Entity,  ManyToMany,  PrimaryGeneratedColumn } from "typeorm";
+
+import { Admins } from "src/admins/admins.entity";
+
+
+
 
 @Entity('restaurant')
 export class Restaurant {
     @PrimaryGeneratedColumn()
     restaurant_id: number;
 
-    @Column({length:20, unique: true })
+    @Column({length:40, unique: true })
     name: string;
 
     @Column({ length:240})
-    description: string;s
+    description: string;
 
     @Column({length: 40})
     address: string;
 
-    @OneToOne(() => Menu, menu => menu.restaurant)
-    @JoinColumn({name: 'menu_id'})
-    menu: Menu;
+   
 
-    
+    @ManyToMany(() => Admins, admins => admins.restaurants)
+    @JoinTable({name: "Administradores"})
+    admins: Admins[];
 }
