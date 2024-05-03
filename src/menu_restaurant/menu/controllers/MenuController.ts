@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import { MenuService } from '../services/MenuServices';
-import { MenuDTO } from '../dtos/MenuDto';
+import { MenuService } from '../services/MenuService';
+import { MenuDTO } from '../dtos/MenuDTO';
 
 export class MenuController {
     private menuService = new MenuService();
