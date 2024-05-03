@@ -5,7 +5,7 @@ import { DatabaseModule } from '../database/database.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Category } from './entity/category.entity';
 import { Product } from 'src/product/product.entity';
-import { Menu } from 'src/menu/user/entity/menu.entity';
+import { Menu } from 'src/menu/entity/menu.entity';
 
 @Module({
   imports: [

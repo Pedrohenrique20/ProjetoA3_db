@@ -15,7 +15,7 @@ import { ProductModule } from './product/product.module';
 import { RestaurantModule } from './restaurant/restaurant.module';
 import { MenuModule } from './menu/menu.module';
 import { Restaurant } from './restaurant/restaurant.entity';
-import { Menu } from './menu/user/entity/menu.entity';
+import { Menu } from './menu/entity/menu.entity';
 
 @Module({
   imports: [DatabaseModule,
