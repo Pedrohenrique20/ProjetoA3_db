@@ -1,16 +1,17 @@
+import { Admins } from "src/admins/admins.entity";
 import { Menu } from "src/menu/entity/menu.entity";
-import { Column, Entity, JoinColumn, ManyToMany, OneToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, JoinColumn, JoinTable, ManyToMany, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity('restaurant')
 export class Restaurant {
     @PrimaryGeneratedColumn()
     restaurant_id: number;
 
-    @Column({length:20, unique: true })
+    @Column({length:40, unique: true })
     name: string;
 
     @Column({ length:240})
-    description: string;s
+    description: string;
 
     @Column({length: 40})
     address: string;
@@ -19,5 +20,7 @@ export class Restaurant {
     @JoinColumn({name: 'menu_id'})
     menu: Menu;
 
-    
+    @ManyToMany(() => Admins, admins => admins.restaurants)
+    @JoinTable({name: "Administradores"})
+    admins: Admins[];
 }
