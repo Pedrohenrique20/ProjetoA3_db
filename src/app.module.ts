@@ -20,6 +20,7 @@ import { AdminsModule } from './admins/admins.module'
 import { Admins } from './admins/admins.entity';
 import { RestaurantController } from './restaurant/controller/restaurant.controller';
 import { RestaurantService } from './restaurant/service/restaurant.service';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [DatabaseModule,
@@ -29,7 +30,8 @@ import { RestaurantService } from './restaurant/service/restaurant.service';
     ProductModule,
     RestaurantModule,
     MenuModule,
-    AdminsModule
+    AdminsModule,
+    AuthModule
   ],
   controllers: [AppController, CategoryController, RestaurantController],
   providers: [AppService, CategoryService, RestaurantService],

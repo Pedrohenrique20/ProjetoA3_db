@@ -13,6 +13,7 @@ export class CreateRestaurantDto {
     @IsString()
     @Length(2, 40, {message: 'o tamanho máximo do endereço é 40 caracteres' })
     address: string;
+    
 }
 
 export class UpdateRestaurantDto extends PartialType(CreateRestaurantDto){}
