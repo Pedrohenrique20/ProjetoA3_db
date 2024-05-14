@@ -18,8 +18,7 @@ export class Restaurant {
     @Column({length: 40})
     address: string;
 
-    @OneToOne(() => Menu, menu => menu.restaurant)
-    @JoinColumn({name: 'menu_id'})
+    @OneToOne(() => Menu, (menu) => menu.restaurant)
     menu: Menu;
 
     @ManyToMany(() => User, user => user.restaurants)

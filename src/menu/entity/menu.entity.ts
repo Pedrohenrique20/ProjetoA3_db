@@ -7,16 +7,15 @@ import { Entity, JoinColumn, OneToMany, OneToOne, PrimaryGeneratedColumn } from 
 export class Menu {
     @PrimaryGeneratedColumn()
     menu_id: number;
+    
 
     @OneToOne(() => Restaurant, restaurant => restaurant.menu)
-    @JoinColumn({name: 'restaurant_id'})
+    @JoinColumn()
     restaurant: Restaurant;
 
     @OneToMany(() => Category, category => category.menu)
-    @JoinColumn( { name: 'menu_categories'} ) 
     categories: Category[];
 
     @OneToMany(() => Product, product => product.menu)
-    @JoinColumn({ name: "products"})
     products: Product[];
 }

@@ -1,7 +1,7 @@
-import { RestaurantDto } from './restaurant.dto';
+import { CreateRestaurantDto } from './restaurant.dto';
 
 describe('RestaurantDto', () => {
   it('should be defined', () => {
-    expect(new RestaurantDto()).toBeDefined();
+    expect(new CreateRestaurantDto()).toBeDefined();
   });
 });

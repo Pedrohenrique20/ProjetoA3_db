@@ -12,13 +12,13 @@ export class RestaurantService {
     ){}
 
     async findAll(): Promise<Restaurant[]> {
-        return await this.restaurantRepository.find({ relations: ['menu', 'admins']})
+        return await this.restaurantRepository.find({ relations: ['menu', 'user', 'category', 'product']})
     }
 
     async findOne(id: number): Promise<Restaurant> {
         const restaurant = await this.restaurantRepository.findOne({
             where: { restaurant_id: id },
-            relations: ['menu', 'admins']
+            relations: ['menu', 'user', 'category', 'product']
         })
         if(!restaurant){
             throw new HttpException(`Restaurante não encontrado.`, HttpStatus.NOT_FOUND);
