@@ -1,4 +1,4 @@
-import { Column, Entity, JoinColumn, ManyToMany, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, JoinColumn, JoinTable, ManyToMany, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { Filiacao } from './filiacao.entity';
 import { Restaurant } from 'src/restaurant/restaurant.entity';
 
@@ -19,4 +19,7 @@ export class User {
   @OneToMany(() => Filiacao, filiacao => filiacao.user)
   filiacoes: Filiacao[];
 
+  @ManyToMany(() => Restaurant, restaurant => restaurant.user )
+  @JoinTable({ name: "Restaurants"})
+  restaurants: Restaurant[];
 }

@@ -1,4 +1,5 @@
 import { Category } from "src/category/entity/category.entity";
+import { Product } from "src/product/product.entity";
 import { Restaurant } from "src/restaurant/restaurant.entity";
 import { Entity, JoinColumn, OneToMany, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 
@@ -14,4 +15,8 @@ export class Menu {
     @OneToMany(() => Category, category => category.menu)
     @JoinColumn( { name: 'menu_categories'} ) 
     categories: Category[];
+
+    @OneToMany(() => Product, product => product.menu)
+    @JoinColumn({ name: "products"})
+    products: Product[];
 }
