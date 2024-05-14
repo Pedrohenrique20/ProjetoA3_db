@@ -18,9 +18,6 @@ export class Restaurant {
     @Column({length: 40})
     address: string;
 
-    @OneToOne(() => Menu, (menu) => menu.restaurant)
-    menu: Menu;
-
     @ManyToMany(() => User, user => user.restaurants)
     @JoinTable({name: "Usuarios administradores"})
     user:  User[];

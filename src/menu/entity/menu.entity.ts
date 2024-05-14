@@ -9,7 +9,7 @@ export class Menu {
     menu_id: number;
     
 
-    @OneToOne(() => Restaurant, restaurant => restaurant.menu)
+    @OneToOne(() => Restaurant)
     @JoinColumn()
     restaurant: Restaurant;
 
