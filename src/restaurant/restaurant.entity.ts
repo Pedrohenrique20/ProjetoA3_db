@@ -20,7 +20,7 @@ export class Restaurant {
     restaurant_address: string;
 
     @Column({ length: 15})
-    restaurant_tel: bigint;
+    restaurant_tel: number;
 
     @OneToMany(() => Category, category => category.restaurant)
     category: Category[];

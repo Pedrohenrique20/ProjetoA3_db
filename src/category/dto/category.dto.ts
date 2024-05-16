@@ -9,6 +9,12 @@ export class CreateCategoryDto {
     @IsString()
     @Length(1, 40,{ message: 'O nome deve ter até 40 caracteres' })
     category_name: string;
+
+    @IsInt()
+    restaurant_id: number;
+
+    @IsInt()
+    menu_id: number;
 }
 
 export class UpdateCategoryDto extends PartialType(CreateCategoryDto){} 
