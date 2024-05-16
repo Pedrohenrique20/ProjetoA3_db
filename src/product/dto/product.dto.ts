@@ -10,11 +10,14 @@ export class CreateProductDto {
     product_name: string;
 
     @IsString()
-    @Length(2, 240, { message: 'o tamanho minimo da descrição é  de 2 caracteres e no máximo 240' })
+    @Length(2, 255, { message: 'o tamanho minimo da descrição é  de 2 caracteres e no máximo 240' })
     product_description: string;
 
     @IsInt()
     category_id: number;
+
+    @IsInt()
+    restaurant_id: number;
 }
 
 export class UpdateProductDto extends PartialType(CreateProductDto){}
