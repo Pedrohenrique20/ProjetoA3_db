@@ -15,7 +15,7 @@ export class MenuController {
     async findOne(@Param('id') id: number): Promise<any> {
         return this.menuService.findOne(id);
     }
-
+    /*
     @Post()
     async create(@Body()createMenuDto : CreateMenuDto ): Promise<any>{
         return this.menuService.create(createMenuDto);
@@ -28,7 +28,7 @@ export class MenuController {
     ): Promise <any>{
         return  this.menuService.update(id, updateMenuDto);
     }
-
+    */
     @Delete(':id')
     async delete(@Param('id') id: number): Promise<void>{
         return this.menuService.delete(id)

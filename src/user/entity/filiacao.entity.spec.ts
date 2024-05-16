@@ -1,7 +1,7 @@
-import { FiliacaoEntity } from './filiacao.entity';
+import { Filiacao } from './filiacao.entity';
 
 describe('FiliacaoEntity', () => {
   it('should be defined', () => {
-    expect(new FiliacaoEntity()).toBeDefined();
+    expect(new Filiacao()).toBeDefined();
   });
 });

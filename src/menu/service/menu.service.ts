@@ -27,12 +27,10 @@ export class MenuService {
         }
         return menu;
     }
-
+    /*
     async create(createMenuDto: CreateMenuDto): Promise<Menu> {
         try {
-            return await this.menuRepository.save(
-                this.menuRepository.create(createMenuDto)
-            )
+            return await this.menuRepository.save(createMenuDto)
         } catch (error) {
             if (error.code === 'ER_DUP_ENTRY') {
                 throw new HttpException('O restaurante já possui um menu.', HttpStatus.BAD_REQUEST);
@@ -44,19 +42,19 @@ export class MenuService {
             }
         }
     }
-    
-    async update( id: number, updateMenuDto: UpdateMenuDto): Promise<void>{
-        const result= await this.menuRepository.update(id, updateMenuDto);
-        if (result.affected === 0) {
-            throw new HttpException(`Menu não encontrado.`, HttpStatus.NOT_FOUND);
-          }
-    }
 
-    async delete( id: number): Promise<void>{
-        const result= await this.menuRepository.delete(id);
+    async update(id: number, updateMenuDto: UpdateMenuDto): Promise<void> {
+        const result = await this.menuRepository.update(id, updateMenuDto);
         if (result.affected === 0) {
             throw new HttpException(`Menu não encontrado.`, HttpStatus.NOT_FOUND);
-          }
+        }
+    } */
+
+    async delete(id: number): Promise<void> {
+        const result = await this.menuRepository.delete(id);
+        if (result.affected === 0) {
+            throw new HttpException(`Menu não encontrado.`, HttpStatus.NOT_FOUND);
+        }
     }
 
 
