@@ -15,6 +15,7 @@ export class CreateRestaurantDto {
     restaurant_address: string;
 
     @IsInt()
+    @Length(9, 15, {message: 'o tamanho máximo do endereço é 15 caracteres e o mínimo 9' })
     restaurant_tel: number; 
     
 }

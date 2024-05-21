@@ -31,17 +31,10 @@ export class CreateUserDto {
 
   @IsString()
   @Length(4, 40, { message: 'o tamanho minimo do estado é 4 caracteres' })
+  user_state: string;
 
   @IsEnum(UserRole, { message: 'o valor deve ser um dos roles definidos' })
   is_admin: UserRole;
-
-
-  
-
-
-
-
-
 
   @IsString()
   @Matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/, {
