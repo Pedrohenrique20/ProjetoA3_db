@@ -1,4 +1,4 @@
-import { Reservation } from "src/resarvation/entity/reservation.entity";
+import { Reservation } from "src/reservation/entity/reservation.entity";
 import { Restaurant } from "src/restaurant/restaurant.entity";
 import { Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
 

@@ -3,7 +3,7 @@ import { Filiacao } from './filiacao.entity';
 import { Restaurant } from 'src/restaurant/restaurant.entity';
 import { UserRole } from './UserRole';
 import { RestaurantAdmins } from 'src/restaurant_admins/entity/restaurant_admins.entity';
-import { Reservation } from 'src/resarvation/entity/reservation.entity';
+import { Reservation } from 'src/reservation/entity/reservation.entity';
 
 @Entity('user')
 export class User {

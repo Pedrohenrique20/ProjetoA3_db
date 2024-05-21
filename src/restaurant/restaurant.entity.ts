@@ -2,7 +2,7 @@ import { Category } from "src/category/entity/category.entity";
 import { Menu } from "src/menu/entity/menu.entity";
 import { Product } from "src/product/product.entity";
 import { ProductMenu } from "src/product_menu/entity/product_menu.entity";
-import { Reservation } from "src/resarvation/entity/reservation.entity";
+import { Reservation } from "src/reservation/entity/reservation.entity";
 import { RestaurantAdmins } from "src/restaurant_admins/entity/restaurant_admins.entity";
 import { Tables } from "src/table/entity/table.entity";
 import { Column, Entity, JoinColumn, JoinTable, ManyToMany, OneToMany, OneToOne, PrimaryGeneratedColumn } from "typeorm";
