@@ -4,18 +4,17 @@ import { AppController } from 'src/app.controller';
 import { AppService } from 'src/app.service';
 import { Category } from 'src/category/entity/category.entity';
 import { DatabaseModule } from 'src/database/database.module';
+import { Menu } from 'src/menu/entity/menu.entity';
+import { Product } from 'src/product/product.entity';
 import { Restaurant } from 'src/restaurant/restaurant.entity';
-import { Menu } from './entity/menu.entity';
-import { MenuController } from './controller/menu.controller';
-import { MenuService } from './service/menu.service';
-import { ProductMenu } from 'src/product_menu/entity/product_menu.entity';
+import { ProductMenu } from './entity/product_menu.entity';
 
 @Module({
     imports: [
       DatabaseModule,
-      TypeOrmModule.forFeature([Menu, Category, Restaurant, ProductMenu]),
+      TypeOrmModule.forFeature([Category, Product, Menu, Restaurant, ProductMenu]),
     ],
-    controllers: [AppController, MenuController],
-    providers: [AppService, MenuService],
+    controllers: [AppController],
+    providers: [AppService],
   })
-export class MenuModule {}
+export class ProductMenuModule {}

@@ -21,8 +21,7 @@ export class Category {
     @PrimaryColumn()
     menu_id: number;
 
-    @OneToMany(() => Product, (product) => product.category)
-    @JoinColumn({name: 'product_id'})
+    @OneToMany(() => Product, product => product.category)
     product: Product[];
 
     @OneToMany(() => ProductMenu, productmenu => productmenu.category)
@@ -35,5 +34,4 @@ export class Category {
     @ManyToOne(() => Restaurant, restaurant => restaurant.category)
     @JoinColumn({ name: "restaurant_id" })
     restaurant: Restaurant;
-
 }

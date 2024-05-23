@@ -19,6 +19,10 @@ import { Menu } from './menu/entity/menu.entity';
 import { RestaurantController } from './restaurant/controller/restaurant.controller';
 import { RestaurantService } from './restaurant/service/restaurant.service';
 import { AuthModule } from './auth/auth.module';
+import { ProductMenuModule } from './product_menu/product_menu.module';
+import { ReservationModule } from './reservation/reservation.module';
+import { RestaurantAdminsModule } from './restaurant_admins/restaurant_admins.module';
+import { TablesModule } from './table/tables.module';
 
 @Module({
   imports: [DatabaseModule,
@@ -28,7 +32,11 @@ import { AuthModule } from './auth/auth.module';
     ProductModule,
     RestaurantModule,
     MenuModule,
-    AuthModule
+    AuthModule,
+    ProductMenuModule,
+    ReservationModule,
+    RestaurantAdminsModule,
+    TablesModule
   ],
   controllers: [AppController, CategoryController, RestaurantController],
   providers: [AppService, CategoryService, RestaurantService],

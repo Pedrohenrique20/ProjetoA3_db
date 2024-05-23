@@ -19,7 +19,7 @@ export class User {
   @Column({ length: 60 })
   user_password: string;
 
-  @Column({ length: 15})
+  @Column()
   user_tel: number;
 
   @Column({length: 40})

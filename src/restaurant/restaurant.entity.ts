@@ -21,7 +21,7 @@ export class Restaurant {
     @Column({length: 60})
     restaurant_address: string;
 
-    @Column({ length: 15})
+    @Column()
     restaurant_tel: number;
 
     @OneToMany(() => Category, category => category.restaurant)

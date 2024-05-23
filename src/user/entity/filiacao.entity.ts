@@ -21,6 +21,7 @@ export class Filiacao {
     @Column({ length: 2 })
     uf: string;
 
+    /*
     @ManyToOne(() => User, user => user.filiacoes)
-    user: User;  
+    user: User;  */
 }
