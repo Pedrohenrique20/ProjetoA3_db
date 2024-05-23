@@ -7,7 +7,7 @@ export class CreateRestaurantDto {
     restaurant_name: string;
 
     @IsString()
-    @Length(1,240, {message: 'o tamanho máximo do nome é 8 caracteres'})
+    @Length(1,255, {message: 'o tamanho máximo do nome é 8 caracteres'})
     restaurant_description: string;
 
     @IsString()
